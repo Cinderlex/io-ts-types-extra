@@ -1,0 +1,24 @@
+{
+  "name": "io-ts-types-extra",
+  "version": "0.0.1",
+  "description": "An additional codecs for use with io-ts",
+  "sideEffects": false,
+  "author": "Cinderlex <cinderlex@pm.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cinderlex/io-ts-types-extra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cinderlex/io-ts-types-extra/issues"
+  },
+  "homepage": "https://github.com/Cinderlex/io-ts-types-extra",
+  "tags": [
+    "io-ts",
+    "fp-ts"
+  ],
+  "keywords": [
+    "io-ts",
+    "fp-ts"
+  ]
+}
