@@ -1,10 +1,27 @@
 {
-  "name": "io-ts-types-extra",
-  "version": "0.0.1",
-  "description": "An additional codecs for use with io-ts",
+  "name": "@cinderlex/io-ts-types-extra",
+  "version": "0.1.0",
+  "description": "Additional codecs for use with io-ts",
   "sideEffects": false,
   "author": "Cinderlex <cinderlex@pm.me>",
   "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules docs lib",
+    "dependencies": "npm ci && npm i --no-save io-ts@^2 fp-ts@^2",
+    "security": "npm audit",
+    "format": "prettier --config prettier.config.js --check src/**/*",
+    "format:fix": "prettier --config prettier.config.js --write src/**/*",
+    "lint": "eslint --ext .ts src/",
+    "test": "jest --config jest.config.js",
+    "doc": "typedoc src",
+    "build": "tsc",
+    "pipeline": "npm run clean && npm run dependencies && npm run security && npm run format && npm run lint && npm run test && npm run doc && npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Cinderlex/io-ts-types-extra.git"
@@ -20,5 +37,27 @@
   "keywords": [
     "io-ts",
     "fp-ts"
-  ]
+  ],
+  "peerDependencies": {
+    "fp-ts": "^2.0.0",
+    "io-ts": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/prettier": "^2.4.4",
+    "@types/validator": "^13.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "typedoc": "^0.22.13",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "validator": "^13.7.0"
+  }
 }
